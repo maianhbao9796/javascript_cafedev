@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.4 - Bài 10</h1>
+    <p>
+      Chúng ta có một chi phí ở dạng “$ 120”. Đó là: ký hiệu đô la đi trước, sau
+      đó đến số.
+    </p>
+    <p>
+      Tạo một hàm extractCurrencyValue(str) sẽ trích xuất giá trị số từ chuỗi đó
+      và trả về.
+    </p>
+    <script>
+      // BÀI LÀM
+      function extractCurrencyValue(str) {
+        return str.replace(/[^0-9]/g, '');
+      }
+      console.log(extractCurrencyValue('$fsf120'));
+    </script>
+  </body>
+</html>

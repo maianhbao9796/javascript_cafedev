@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.3 - Bài 3</h1>
+    <p>Chúng ta có một đối tượng lưu trữ tiền lương của nhóm chúng ta:</p>
+    <ul>
+      <li>
+        Viết code để tính tổng tất cả các khoản lương và lưu trữ trong biến
+        tổng. Nên là 390 trong ví dụ trên.
+      </li>
+      <li>Nếu tiền lương trống, thì kết quả phải là 0.</li>
+    </ul>
+
+    <script>
+      let salaries = {
+        John: 100,
+        Ann: 160,
+        Pete: 130,
+      };
+      var result = 0;
+      for (var key in salaries) {
+        console.log(`Tiền lương của ${key} là ${salaries[key]}`);
+        result += salaries[key];
+      }
+      console.log('Tổng tiền lương của nhóm là: ', result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.5 - Bài 11</h1>
+    <p>
+      Bạn có một mảng các đối tượng người dùng, mỗi đối tượng có user.name. Viết
+      code chuyển đổi nó thành một mảng tên.
+    </p>
+    <script>
+      // BÀI LÀM
+      let john = { name: 'John', age: 25 };
+      let pete = { name: 'Pete', age: 30 };
+      let mary = { name: 'Mary', age: 28 };
+
+      let users = [john, pete, mary];
+      let names = users.filter((item) => {
+        console.log(item.name);
+        return item.name;
+      });
+      console.log(names);
+    </script>
+  </body>
+</html>

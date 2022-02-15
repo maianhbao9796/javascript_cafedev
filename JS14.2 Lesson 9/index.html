@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.2 - Bài 9</h1>
+    <p>Hàm sau đây trả về true nếu tuổi tham số lớn hơn 18.</p>
+    <p>Nếu không, nó sẽ yêu cầu xác nhận và trả về kết quả của nó.</p>
+
+    <!-- function checkAge(age) {
+      if (age > 18) {
+        return true;
+      } else {
+        return confirm('Did parents allow you?');
+      }
+    } -->
+
+    <p>
+      Viết lại nó, để thực hiện tương tự, nhưng không có if, trong một dòng duy
+      nhất.
+    </p>
+    <script>
+      var age = prompt('Nhập độ tuổi của bạn: ', '');
+      function checkAge(age) {
+        return age > 18
+          ? alert('Bạn đã đủ tuổi!')
+          : confirm('Did parents allow you?');
+      }
+
+      checkAge(age);
+    </script>
+  </body>
+</html>

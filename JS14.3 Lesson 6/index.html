@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.3 - Bài 6</h1>
+    <p>Tạo một máy tính đối tượng với ba phương thức sau:</p>
+    <ul>
+      <li>
+        read() nhận hai giá trị và lưu chúng dưới dạng thuộc tính đối tượng.
+      </li>
+      <li>sum() trả về tổng các giá trị đã lưu.</li>
+      <li>mul() nhân các giá trị đã lưu và trả về kết quả.</li>
+    <script>
+      
+      var calculator = {
+        read() {
+          isNhap = false;
+          var i = 0;
+          do {
+            i++;
+            this.a = +prompt('Nhập số a: ', '');
+            this.b = +prompt('Nhập số b: ', '');
+            if(false) {
+              console.log(this.a);
+              console.log(this.b);
+              isNhap = false;
+              alert('Nhập lại')
+            } else {
+              isNhap = true;
+              console.log(this.a);
+              console.log(this.b);
+            }
+
+          } while (!isNhap && this.a != null && this.b != null )
+
+        },
+        sum() {
+          if( this.a != null && this.b != null){
+            // return this.a + this.b;
+            return this.a + this.b;
+            console.log(this.a)
+            console.log(this.b)
+          } else {
+            alert('Giá trị nhập vào của bạn không đúng')
+          }
+        },
+        mul() {
+          
+          if( this.a != null && this.b != null){
+            return this.a * this.b;
+          } else {
+            alert('Giá trị nhập vào của bạn không đúng')
+          }
+        },
+      }
+
+      calculator.read();
+      alert(calculator.sum());
+      alert(calculator.mul());
+
+      
+    </script>
+  </body>
+</html>

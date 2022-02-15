@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.5 - Bài 4</h1>
+    <p>Viết hàm sumInput() rằng:</p>
+    <ul>
+      <li>
+        Yêu cầu người dùng nhập các giá trị bằng cách sử dụng prompt và lưu trữ
+        các giá trị trong mảng.
+      </li>
+      <li>
+        Kết thúc yêu cầu khi người dùng nhập một giá trị không phải số, một
+        chuỗi trống hoặc nhấn “Hủy”.
+      </li>
+      <li>Tính toán và trả về tổng của các mục mảng.</li>
+    </ul>
+    <script>
+      // BÀI LÀM
+      function sumInput() {
+        let num = [];
+        while (true) {
+          let value = prompt('Nhập số thêm vào mảng: ', '');
+          if (value === null || value === '' || !isFinite(value)) {
+            break;
+          }
+          num.push(value);
+        }
+        console.log(num);
+        let result = 0;
+
+        num.forEach(function (item) {
+          result += +item;
+        });
+        console.log(result);
+      }
+      sumInput();
+    </script>
+  </body>
+</html>

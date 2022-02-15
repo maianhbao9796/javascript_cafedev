@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.5 - Bài 13</h1>
+    <p>
+      Viết hàm sortByAge(users) lấy một mảng các đối tượng User(có name và
+      age)có thuộc tính age và sắp xếp chúng theo độ tuổi.
+    </p>
+    <ul>
+      <li></li>
+    </ul>
+    <script>
+      // BÀI LÀM
+
+      let users = [
+        { name: 'A', age: 13 },
+        { name: 'B', age: 71 },
+        { name: 'C', age: 70 },
+      ];
+      let newArray = [];
+      function sortByAge(users) {
+        return (newArray = users.sort((a, b) => (a.age > b.age ? 1 : -1)));
+      }
+      sortByAge(users);
+      console.log(newArray);
+      console.table(users);
+    </script>
+  </body>
+</html>

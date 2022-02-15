@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.4 - Bài 8</h1>
+    <p>
+      Viết một hàm checkSpam(str) trả về true nếu str chứa ‘cafedev’ hoặc
+      ‘Youtube Cafedev’, ngược lại là false.
+    </p>
+    <p>Hàm phải không phân biệt chữ hoa chữ thường:</p>
+    <script>
+      // BÀI LÀM
+
+      function checkSpam() {
+        let str = prompt(
+          'Nhập chuỗi trả về true nếu str chứa ‘cafedev’ hoặc ‘Youtube Cafedev’ ngược lại là false ',
+          ''
+        );
+
+        if (
+          str.indexOf('Youtube Cafedev') != -1 ||
+          str.indexOf('cafedev') != -1
+        ) {
+          alert('Tìm thấy');
+          return true;
+        } else {
+          alert('Không tìm thấy');
+          return false;
+        }
+      }
+
+      console.log(checkSpam());
+    </script>
+  </body>
+</html>

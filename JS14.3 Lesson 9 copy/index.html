@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.3 - Bài 9 Cách 2</h1>
+    <p>Tạo một hàm khởi tạo Calculator tạo các đối tượng với 3 phương thức:</p>
+    <ul>
+      <li>
+        read() yêu cầu hai giá trị bằng cách sử dụng prompt và ghi nhớ chúng trong thuộc tính đối tượng.
+      </li>
+      <li>sum() trả về tổng của các thuộc tính này.</li>
+      <li>mul() trả về tích nhân của các thuộc tính này.</li>
+    <script>
+      let isOk = false;
+      function inputHelper (title) {
+        let i = 0;
+        let a;
+          do {
+            i++;
+            a = +prompt(title, '');
+            if(isFinite(a) == false) {
+             
+              alert("Nhập không hợp lệ");
+              // console.log(typeof this.a);
+            } else {
+              console.log('so thoa man');
+              return a;
+            }
+          }
+          while (i<=3);
+      }f
+      function calculator() {
+        this.read = function() {
+          this.a = inputHelper("Nhap so a");
+          this.b = inputHelper("Nhap so b");
+        }
+        this.sum = function () {
+          return this.a + this.b;
+        }
+        this.mul = function () {
+          return this.a * this.b;
+        }
+      }
+
+      var calc = new calculator();
+      
+      calc.read();
+
+      
+
+      alert('Tổng của 2 giá trị là: ' + calc.sum());
+      alert(`Tích của 2 giá trị là: ${calc.mul()}`);
+      
+    </script>
+  </body>
+</html>

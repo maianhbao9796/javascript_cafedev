@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.2 - Bài 5:</h1>
+    <p>
+      Viết một vòng lặp nhắc nhở nhập một số lớn hơn 100. Nếu khách nhập một số
+      khác – hãy yêu cầu họ nhập lại.
+    </p>
+    <p>
+      Vòng lặp phải yêu cầu một số cho đến khi khách nhập một số lớn hơn 100
+      hoặc hủy đầu vào / nhập vào một dòng trống.
+    </p>
+    <p>
+      Ở đây chúng ta có thể giả định rằng khách truy cập chỉ nhập số. Không cần
+      triển khai xử lý đặc biệt cho đầu vào không phải là số trong tác vụ này.
+    </p>
+    <script>
+      let num;
+      do {
+        num = prompt('Hãy nhập một số lớn hơn 100?', '');
+      } while (num <= 100);
+    </script>
+  </body>
+</html>

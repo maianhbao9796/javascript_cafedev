@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.3 - Bài 7</h1>
+    <p>Có một đối tượng ladder cho phép lên và xuống:</p>
+    <ul>
+      <li>
+        read() nhận hai giá trị và lưu chúng dưới dạng thuộc tính đối tượng.
+      </li>
+      <li>sum() trả về tổng các giá trị đã lưu.</li>
+      <li>mul() nhân các giá trị đã lưu và trả về kết quả.</li>
+    <script>
+      
+      let ladder = {
+        step: 0,
+        up() {
+          this.step++;
+          console.log('++')
+          return this;
+        },
+        down() {
+          this.step--;
+          console.log('--')
+          return this;
+        },
+        showStep: function() { // shows the current step
+          alert( this.step );
+          console.log('Kết quả: ' + this.step)
+          return this;
+
+        }
+      };
+      
+      // Cách ban đầu
+      ladder.up();
+      ladder.up();
+      ladder.down();
+      ladder.showStep(); // 1
+
+      // Thay đổi code để thực hiện Cách sau
+      ladder.up().up().down().showStep(); // 1
+    </script>
+  </body>
+</html>

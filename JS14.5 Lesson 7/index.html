@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.5 - Bài 7</h1>
+    <p>
+      Viết một hàm filterRange(arr, a, b) lấy một mảng arr, tìm kiếm các phần tử
+      giữa a và b trong đó và trả về một mảng trong số đó.
+    </p>
+    <ul>
+      <li>Hàm không nên sửa đổi mảng. Nó sẽ trả về mảng mới.</li>
+    </ul>
+    <script>
+      // BÀI LÀM
+      let myArray = [];
+      function filterRange() {
+        let input;
+        while (true) {
+          input = prompt('Nhập một dãy số thêm vào mảng: ', '');
+          if (!isFinite(input)) {
+            alert('Vui lòng nhập đúng dãy số!');
+          } else {
+            myArray = input.split('');
+            break;
+          }
+        }
+        console.log(myArray);
+      }
+
+      function inputValue() {
+        let numA = prompt('Nhập số A: ', '');
+        let numB = prompt('Nhập số B: ', '');
+        var newArray = myArray.filter(function (item) {
+          if (item >= numA && item <= numB) {
+            return item;
+          }
+          console.log('A: ' + numA);
+          console.log('B: ' + numB);
+        });
+        // let arr = [1, 2, 3, 4, 5, 6, 9, 8, 7];
+        console.log(`Những số trong khoảng từ ${numA} đến ${numB} là:`);
+        console.log(newArray.sort());
+      }
+
+      filterRange();
+      inputValue();
+    </script>
+  </body>
+</html>

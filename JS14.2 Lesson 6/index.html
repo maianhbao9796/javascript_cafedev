@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>
+      JavaScript 14.2 - Bài 6: Viết một vòng lặp nhắc nhở nhập một số lớn hơn
+      100.
+    </h1>
+    <p>
+      Một số nguyên lớn hơn 1 được gọi là số nguyên tố nếu nó không thể chia hết
+      mà không có dư cho bất kỳ thứ gì ngoại trừ 1 và chính nó.
+    </p>
+    <p>
+      Nói cách khác, n> 1 là số nguyên tố nếu nó không thể chia đều cho bất kỳ
+      thứ gì ngoại trừ 1 và n.
+    </p>
+    <p>
+      Ví dụ, 5 là một số nguyên tố, vì nó không thể bị chia mà không có phần dư
+      cho 2, 3 và 4.
+    </p>
+    <p>Viết Code xuất ra các số nguyên tố trong khoảng từ 2 đến n.</p>
+    <p>Với n = 10 kết quả sẽ là 2,3,5,7.</p>
+    <script>
+      let n = 1;
+
+      nextPrime: for (let i = 2; i <= n; i++) {
+        // for each i...
+
+        for (let j = 2; j < i; j++) {
+          // look for a divisor..
+          if (i % j == 0) continue nextPrime; // not a prime, go next i
+        }
+
+        console.log(i); // a prime
+      }
+    </script>
+  </body>
+</html>

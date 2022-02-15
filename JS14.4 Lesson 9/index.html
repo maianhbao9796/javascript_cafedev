@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.4 - Bài 9</h1>
+    <p>
+      Tạo một hàm truncate(str, maxlength) để kiểm tra độ dài của str và nếu nó
+      vượt quá maxlength – thay thế phần cuối của str bằng ký tự dấu chấm lửng
+      “…”, để làm cho độ dài của nó bằng maxlength.
+    </p>
+    <p>Kết quả của hàm phải là chuỗi được cắt ngắn (nếu cần).</p>
+    <script>
+      // BÀI LÀM
+
+      function toiUuText(str, maxlength) {
+        return str.length > maxlength
+          ? str.slice(0, maxlength + 1) + '...'
+          : str;
+      }
+
+      console.log(toiUuText('một hai ba bốn năm sáu bảy tám', 2));
+    </script>
+  </body>
+</html>

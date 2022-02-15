@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.4 - Bài 4</h1>
+    <p>Tạo một hàm readNumber nhập một số cho đến khi khách nhập một giá trị số hợp lệ.</p>
+    <ul>
+      <li>Giá trị kết quả phải được trả về dưới dạng số.</li>
+      <li>
+        Khách truy cập cũng có thể dừng quá trình bằng cách nhập một dòng trống hoặc nhấn “HỦY”. 
+      </li>
+      <li>Trong trường hợp đó, hàm sẽ trả về null.</li>
+      
+    <script>
+        // BÀI LÀM
+        let noti;
+
+        function realNumber() {
+          let num;
+          
+          do{
+            num = prompt("Nhập một số hợp lệ: ", '')
+            
+          } while (!isFinite(num))
+          
+          if ( num === '' || num === null) {
+            
+            return noti = 'Nhập k hợp lệ';
+          } else {
+            
+            console.log(num)
+            return noti = 'Nhập hợp lệ';
+          }
+        }
+        // realNumber()
+        alert(realNumber());
+        console.log(noti);
+    </script>
+  </body>
+</html>

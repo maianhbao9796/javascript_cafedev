@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.2 - Bài 11</h1>
+    <p>
+      Viết một hàm pow (x, n) trả về x theo lũy thừa n. Hay nói cách khác, nhân
+      x với chính nó n lần và trả về kết quả.
+    </p>
+
+    <script>
+      var x = prompt('Nhập x = ', '');
+      var n = prompt('Nhập số lần muốn lũy thừa n = ', '');
+
+      function pow(x, n) {
+        var result = x;
+        for (var i = 0; i < n; i++) {
+          result *= x;
+        }
+        alert(`Kết quả sau khi lũy thừa của ${x} lên ${n} lần bằng: ${result}`);
+      }
+      pow(x, n);
+    </script>
+  </body>
+</html>

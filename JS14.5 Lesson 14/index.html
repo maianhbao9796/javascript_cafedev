@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.5 - Bài 14</h1>
+    <p>
+      Viết hàm getAverageAge(users) lấy một mảng đối tượng có thuộc tính tuổi và
+      trả về tuổi trung bình.
+    </p>
+    <ul>
+      <li>
+        Công thức tính giá trị trung bình là (age1 + age2 + … + ageN) / N.
+      </li>
+    </ul>
+    <script>
+      // BÀI LÀM
+
+      let users = [
+        { name: 'A', age: 13 },
+        { name: 'B', age: 71 },
+        { name: 'C', age: 70 },
+      ];
+
+      function getAverageAge(users) {
+        return (
+          users.reduce((total, item) => total + item.age, 0) / users.length
+        );
+      }
+      console.table(users);
+      console.log(getAverageAge(users));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.3 - Bài 1</h1>
+    <p>Viết code, một dòng cho mỗi yêu cầu sau::</p>
+    <ul>
+      <li>Tạo một đối tượng user trống.</li>
+      <li>Thêm thuộc tính name với giá trị David.</li>
+      <li>Thêm thuộc tính surname với giá trị Xuan.</li>
+      <li>Thay đổi giá trị của name thành Cafedev.</li>
+      <li>Xóa thuộc tính name khỏi đối tượng.</li>
+    </ul>
+
+    <script>
+      var user = {};
+      user.name = 'David';
+      user.surname = 'Xuan';
+      user.name = 'Cafedev';
+      delete user.name;
+
+      console.log(user);
+    </script>
+  </body>
+</html>

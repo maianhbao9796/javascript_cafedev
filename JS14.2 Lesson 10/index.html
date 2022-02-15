@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.2 - Bài 10</h1>
+    <p>Viết hàm min (a, b) trả về gía trị nhỏ nhất trong hai số a và b.</p>
+
+    <script>
+      var a = prompt('Nhập số a: ', '');
+      var b = prompt('Nhập số b: ', '');
+
+      function compareAB(a, b) {
+        if (a > b) {
+          alert(b + ' Là số  nhỏ nhất');
+        } else if (a < b) {
+          alert(a + ' Là số  nhỏ nhất');
+        } else if ((a = b)) {
+          alert('Hai số bằng nhau');
+        } else {
+          alert('Lỗi thao tác khi nhập');
+        }
+      }
+
+      compareAB(a, b);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js"></script>
+    <title>TEST</title>
+  </head>
+  <body>
+    <h1>JavaScript 14.5 - Bài 12</h1>
+    <p>
+      Bạn có một mảng các đối tượng người dùng, mỗi đối tượng có name, surname
+      và id.
+    </p>
+    <ul>
+      <li>
+        Viết code để tạo một mảng khác từ nó, gồm các đối tượng có id và
+        fullName, trong đó fullName được tạo từ name và surname.
+      </li>
+    </ul>
+    <script>
+      // BÀI LÀM
+
+      let myArray = [
+        { name: 'A', surname: 'a', id: 1 },
+        { name: 'B', surname: 'b', id: 2 },
+        { name: 'C', surname: 'c', id: 3 },
+      ];
+
+      let newArray = myArray.map((item) => ({
+        fullName: `${item.name} ${item.surname}`,
+        id: item.id,
+      }));
+      console.log(newArray);
+      console.log(myArray);
+    </script>
+  </body>
+</html>
