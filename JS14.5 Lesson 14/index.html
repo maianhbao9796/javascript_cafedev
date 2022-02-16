@@ -23,9 +23,9 @@
       // BÀI LÀM
 
       let users = [
-        { name: 'A', age: 13 },
-        { name: 'B', age: 71 },
-        { name: 'C', age: 70 },
+        { name: 'A', age: 10 },
+        { name: 'B', age: 4 },
+        { name: 'C', age: 6 },
       ];
 
       function getAverageAge(users) {
@@ -33,8 +33,11 @@
           users.reduce((total, item) => total + item.age, 0) / users.length
         );
       }
+
       console.table(users);
-      console.log(getAverageAge(users));
+      console.log(
+        'Độ tuổi trung bình của mảng là: ' + Math.floor(getAverageAge(users))
+      );
     </script>
   </body>
 </html>
